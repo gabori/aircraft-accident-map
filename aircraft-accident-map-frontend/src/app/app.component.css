@@ -1,0 +1,66 @@
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 64px;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(90deg, #0f172a, #020617);
+  color: #f8fafc;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  font-size: 18px;
+  font-weight: 600;
+
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-right label {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* MODERN SELECT */
+.header-right select {
+  background: #020617;
+  color: #f8fafc;
+
+  border: 1px solid #334155;
+  border-radius: 8px;
+
+  padding: 6px 14px;
+  font-size: 14px;
+
+  outline: none;
+  cursor: pointer;
+
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.header-right select:hover {
+  border-color: #38bdf8;
+}
+
+.header-right select:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}

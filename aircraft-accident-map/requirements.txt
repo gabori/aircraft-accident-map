@@ -1,0 +1,6 @@
+fastapi~=0.124.4
+uvicorn[standard]
+#sqlalchemy~=2.0.45
+#python-dotenv
+pydantic~=2.12.5
+pandas

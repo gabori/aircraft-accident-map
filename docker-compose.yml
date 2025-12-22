@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./aircraft-accident-map
+      dockerfile: Dockerfile
+    container_name: accident-backend
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./aircraft-accident-map-frontend
+      dockerfile: Dockerfile
+    container_name: accident-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

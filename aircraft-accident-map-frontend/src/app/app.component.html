@@ -1,0 +1,23 @@
+<header class="topbar">
+  <div class="title">
+    ✈ Aircraft Accident Map
+  </div>
+
+  <div class="year-picker" (click)="toggleDropdown()">
+    <span class="label">Year</span>
+    <span class="value">{{ year }}</span>
+
+    <div class="dropdown" *ngIf="open">
+      <div
+        class="dropdown-item"
+        *ngFor="let y of years"
+        (click)="selectYear(y)"
+      >
+        {{ y }}
+      </div>
+    </div>
+  </div>
+</header>
+
+<app-stats [year]="year"></app-stats>
+<app-map [year]="year"></app-map>
